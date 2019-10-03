@@ -1,0 +1,27 @@
+{
+    "zapateria": [{
+            "precio": "55",
+            "nombre": "New Balance",
+            "categoria": "Deportivas",
+            "id": 1
+        },
+        {
+            "precio": "10",
+            "nombre": "Primark Shoes",
+            "categoria": "Casual",
+            "id": 2
+        },
+        {
+            "precio": "30",
+            "nombre": "Adidas",
+            "categoria": "Deportivas",
+            "id": 3
+        },
+        {
+            "precio": "35",
+            "nombre": "Nike",
+            "categoria": "Deportivas",
+            "id": 4
+        }
+    ]
+}
