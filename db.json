@@ -1,27 +1,34 @@
 {
-    "zapateria": [{
-            "precio": "55",
-            "nombre": "New Balance",
-            "categoria": "Deportivas",
-            "id": 1
-        },
-        {
-            "precio": "10",
-            "nombre": "Primark Shoes",
-            "categoria": "Casual",
-            "id": 2
-        },
-        {
-            "precio": "30",
-            "nombre": "Adidas",
-            "categoria": "Deportivas",
-            "id": 3
-        },
-        {
-            "precio": "35",
-            "nombre": "Nike",
-            "categoria": "Deportivas",
-            "id": 4
-        }
-    ]
+  "zapateria": [
+    {
+      "precio": "55",
+      "nombre": "New Balance",
+      "categoria": "deportivas",
+      "id": 1
+    },
+    {
+      "nombre": "Primark Men",
+      "precio": "9",
+      "categoria": "casual",
+      "id": 2
+    },
+    {
+      "precio": "30",
+      "nombre": "Adidas",
+      "categoria": "deportivas",
+      "id": 3
+    },
+    {
+      "precio": "35",
+      "nombre": "Nike",
+      "categoria": "deportivas",
+      "id": 4
+    },
+    {
+      "nombre": "Lacoste",
+      "precio": "50",
+      "categoria": "casual",
+      "id": 5
+    }
+  ]
 }

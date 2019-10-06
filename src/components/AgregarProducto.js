@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
 import Error from './Error';
+import axios  from 'axios';
+import Swal from 'sweetalert2';
+import {withRouter} from 'react-router-dom';
 
-function AgregarProducto() {
+function AgregarProducto({history, saveReCharge}) {
 
     const [nombre,guardarNombre] = useState('');
     const [precio,guardarPrecio] = useState('');
@@ -12,7 +15,7 @@ function AgregarProducto() {
         guardarCategoria(e.target.value);
     }
 
-    const agregarProducto = e => {
+    const agregarProducto = async e => {
         e.preventDefault();
 
         if(nombre === '' || precio === '' || categoria === '') {
@@ -21,7 +24,29 @@ function AgregarProducto() {
         }
         saveError(false);
 
-        //Crear el nuevo producto
+        try {
+            const resultado = await axios.post('http://localhost:4000/zapateria', {
+                nombre, precio, categoria    
+            });
+            
+            if(resultado.status === 201) {
+                Swal.fire(
+                    'Producto Creado!',
+                    'Producto creado correctamente!',
+                    'success'
+                  )
+            }
+        }catch(error) {
+            console.log(error);
+            Swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Error! Vuelve a intentarlo.'   
+              })
+        }
+        //Redirigir al listado
+        saveReCharge(true);
+        history.push('/productos');
     }
 
     return (
@@ -72,7 +97,7 @@ function AgregarProducto() {
                         className="form-check-input" 
                         type="radio" 
                         name="categoria"
-                        value="Casual"
+                        value="casual"
                         onChange={readRadioValue}
                     />
                     <label className="form-check-label">
@@ -116,4 +141,4 @@ function AgregarProducto() {
       
     )
 }
-export default AgregarProducto;
+export default withRouter(AgregarProducto);
