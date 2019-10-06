@@ -19,13 +19,25 @@ function EditarProducto(props) {
     const editarProducto= async e => {
 
         e.preventDefault();
+        //validacion
+        const nuevoNombre = nombreRef.current.value,
+        nuevoPrecio = precioRef.current.value;
+
+        if(nuevoNombre === '' || nuevoPrecio === ''){
+            saveError(true);
+            return;
+        }
+
+        saveError(false);
+
+
         //Revisar si cambia la categoria, si no, asigna el mismo valor
-        let categoriaZ = (categoria === '') ? producto.categoria : categoria;
+        let cate = (categoria === '') ? producto.categoria : categoria;
         //Obtener los valores del formulario
         const editarProducto = {
-            nombre : nombreRef.current.value,
-            precio : precioRef.current.value,
-            categoria : categoriaZ
+            nombre : nuevoNombre,
+            precio : nuevoPrecio,
+            categoria : cate
         }
 
         //Enviar el Request
@@ -149,7 +161,7 @@ function EditarProducto(props) {
             </div>
             </div>
 
-            <input type="submit" className="font-weight-bold text-uppercase mt-5 btn btn-danger btn-block py-3" value="Editar Producto" />
+            <input type="submit" className="font-weight-bold text-uppercase mt-5 btn btn-success btn-block py-3" value="Editar Producto" />
         </form>
     </div>
 

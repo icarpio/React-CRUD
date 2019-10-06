@@ -35,7 +35,8 @@ useEffect(() => {
       <main className="container mt-5"></main>
       <Switch>
         <Route exact path="/productos" render={ () => (
-             <Productos productos={productos} />
+             <Productos productos={productos} 
+                        saveReCharge={saveReCharge}/>
            )}/>
 
         <Route exact path="/nuevo-producto" render = {() => (

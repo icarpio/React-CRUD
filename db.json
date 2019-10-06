@@ -1,9 +1,9 @@
 {
   "zapateria": [
     {
-      "precio": "55",
       "nombre": "New Balance",
-      "categoria": "deportivas",
+      "precio": "50",
+      "categoria": "casual",
       "id": 1
     },
     {
@@ -13,22 +13,16 @@
       "id": 2
     },
     {
-      "precio": "30",
-      "nombre": "Adidas",
-      "categoria": "deportivas",
-      "id": 3
-    },
-    {
-      "precio": "35",
-      "nombre": "Nike",
-      "categoria": "deportivas",
-      "id": 4
-    },
-    {
       "nombre": "Lacoste",
       "precio": "50",
-      "categoria": "casual",
-      "id": 5
+      "categoria": "zapatoshombre",
+      "id": 6
+    },
+    {
+      "nombre": "Chanclas Adidas",
+      "precio": "25",
+      "categoria": "sandalias",
+      "id": 7
     }
   ]
 }
